@@ -40,6 +40,8 @@ router.get('/', function (req, res, next) {
 
 router.post('/', function (req, res) {
   const data = req.body;
+  let newMessage = {};
+  console.log(data);
 
   if (data.message === "" || data.userName === "") {
     res.redirect("/new");
